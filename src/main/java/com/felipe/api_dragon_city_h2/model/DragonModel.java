@@ -27,6 +27,6 @@ public class DragonModel {
 
     @Override
     public String toString() {
-        return "ID: " + id + "Nome:  " + nome + "Tipo: " + tipo + "\n";
+        return "ID: " + id + "\nNome: " + nome + "\nTipo: " + tipo + "\n";
     }
 }

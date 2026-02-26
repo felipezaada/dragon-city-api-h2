@@ -19,8 +19,8 @@ public class DragonService {
         this.dragonRepository = dragonRepository;
     }
 
-    public List<DragonModel> insert(DragonModel dragonModel) {
-        dragonRepository.save(dragonModel);
+    public List<DragonModel> insert(List<DragonModel> dragonModel) {
+        dragonRepository.saveAll(dragonModel);
         return list();
     }
 
@@ -37,7 +37,7 @@ public class DragonService {
     }
 
     public void delete(UUID id) {
-        if(dragonRepository.findById(id).isEmpty()) throw new NotFoundIdException();
+        if (!dragonRepository.existsById(id)) throw new NotFoundIdException();
         dragonRepository.deleteById(id);
     }
 }

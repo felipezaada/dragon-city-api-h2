@@ -26,7 +26,7 @@ public class DragonController {
     }
 
     @PostMapping("/inserir")
-    public ResponseEntity<?> inserir(@RequestBody @Valid DragonModel dragonModel) {
+    public ResponseEntity<?> inserir(@RequestBody @Valid List<DragonModel> dragonModel) {
         List<DragonModel> dragons = dragonService.insert(dragonModel);
         return ResponseEntity.ok(dragons);
     }
@@ -40,6 +40,6 @@ public class DragonController {
     @DeleteMapping("/remover/{id}")
     public ResponseEntity<?> excluir(@PathVariable UUID id){
         dragonService.delete(id);
-        return ResponseEntity.ok("Removido com sucesso!");
+        return ResponseEntity.ok("Dragão removido com sucesso!");
     }
 }
