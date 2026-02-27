@@ -27,7 +27,7 @@ public class GlobalExceptionHandle {
   // Esse eu procurei na internet, precisava para a entrada UUID.
 
   @ExceptionHandler(MethodArgumentTypeMismatchException.class)
-  public ResponseEntity<String> handleTypeMismatch(MethodArgumentTypeMismatchException ex) {
+  public ResponseEntity<String> handleTypeMismatch(MethodArgumentTypeMismatchException exception) {
     return ResponseEntity.badRequest().body("ID inválido!");
   }
 

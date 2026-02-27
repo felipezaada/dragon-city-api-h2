@@ -33,7 +33,7 @@ public class DragonController {
 
     @PutMapping("/atualizar")
     public ResponseEntity<?> atualizar(@RequestBody @Valid DragonModel dragonModel) {
-        List<DragonModel> dragons = dragonService.update(dragonModel);
+        DragonModel dragons = dragonService.update(dragonModel);
         return ResponseEntity.ok(dragons);
     }
 

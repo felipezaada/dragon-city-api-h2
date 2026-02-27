@@ -17,7 +17,7 @@ public class DragonModel {
     @UuidGenerator(style = UuidGenerator.Style.RANDOM)
     /*
      utilizei o tipo UUID e o gerador UuidGenerator.Style.RANDOM pois das outras formas é gerado ID sequencial
-     (falha de segurança) e os valores são gerados antes do objeto existir, causando gargalo na API
+     (falha de segurança) e os valores são gerados antes do objeto existir, causando gargalo na API.
     */
     private UUID id;
     @NotBlank(message = "O campo NOME não pode ficar vazio.")
